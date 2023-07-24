@@ -4,12 +4,13 @@ number = random.randint(-10000, 10000)
 
 last_digit = abs(number) % 10
 
-print(f"The string Last digit of {number} is {last_digit}", end=" ")
+result = f"The string Last digit of {number} is {last_digit} "
 
 if last_digit > 5:
-    print("and is greater than 5")
+    result += "and is greater than 5"
 elif last_digit == 0:
-    print("and is 0")
+    result += "and is 0"
 else:
-    print("and is less than 6 and not 0")
-print()
+    result += "and is less than 6 and not 0"
+
+print(result)
