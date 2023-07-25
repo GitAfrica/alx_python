@@ -1,16 +1,26 @@
 #!/usr/bin/python3
-import random
-number = random.randint(-10000, 10000)
+def last_digit_message(num):
+    last_digit = num % 10
+    output = f"Last digit of {num} is {last_digit} and is"
 
-last_digit = abs(number) % 10
+    if last_digit > 5:
+        output += " greater than 5"
+    elif last_digit == 0:
+        output += " 0"
+    else:
+        output += " less than 6 and not 0"
 
-print(f"The string Last digit of {number} is {last_digit}", end=" ")
+    return output
 
-if last_digit > 5:
-    print("and is greater than 5")
-elif last_digit == 0:
-    print("and is 0")
-else:
-    print("and is less than 6 and not 0")
 
-print()
+print(last_digit_message(4205))
+print(last_digit_message(-626))
+print(last_digit_message(1144))
+print(last_digit_message(-9200))
+print(last_digit_message(5247))
+print(last_digit_message(-9318))
+print(last_digit_message(3369))
+print(last_digit_message(-5224))
+print(last_digit_message(-4485))
+print(last_digit_message(3850))
+print(last_digit_message(5169))
